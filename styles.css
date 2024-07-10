@@ -42,6 +42,28 @@ main {
     text-align: center;
 }
 
+.wiki-category {
+    margin: 10px 0;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.wiki-category-content {
+    display: none;
+    margin: 10px 20px;
+}
+
+.wiki-category-content a {
+    display: block;
+    margin: 5px 0;
+    color: blue;
+    text-decoration: none;
+}
+
+.wiki-category-content a:hover {
+    text-decoration: underline;
+}
+
 /* Dark mode */
 @media (prefers-color-scheme: dark) {
     body {
