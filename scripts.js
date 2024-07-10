@@ -5,9 +5,9 @@ function loadPage(page) {
             document.getElementById('content').innerHTML = data;
         })
         .catch(error => {
-            document.getElementById('content').innerHTML = '<h1>Seite nicht gefunden</h1><p>Die angeforderte Seite wurde nicht gefunden.</p>';
+            document.getElementById('content').innerHTML = '<h1>Page Not Found</h1><p>The requested page was not found.</p>';
         });
 }
 
-// Standardmäßig die Startseite laden
+// Load the home page by default
 window.onload = () => loadPage('home');
