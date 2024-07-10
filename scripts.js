@@ -1,41 +1,15 @@
-function loadPage(page) {
-    fetch(page + '.html')
-        .then(response => response.text())
-        .then(data => {
-            document.getElementById('content').innerHTML = data;
-            if (page === 'contact') {
-                initializeContactForm();
-            }
-        })
-        .catch(error => {
-            document.getElementById('content').innerHTML = '<h1>Page Not Found</h1><p>The requested page was not found.</p>';
-        });
-}
-
-function initializeContactForm() {
-    const form = document.getElementById('contactForm');
-    form.addEventListener('submit', function(event) {
-        event.preventDefault();
-        const formData = new FormData(form);
-        const data = {
-            name: formData.get('name'),
-            email: formData.get('email'),
-            message: formData.get('message')
-        };
-        // Here you would send the data to a server, e.g., with fetch:
-        // fetch('https://example.com/api/contact', {
-        //     method: 'POST',
-        //     headers: {
-        //         'Content-Type': 'application/json'
-        //     },
-        //     body: JSON.stringify(data)
-        // }).then(response => response.json())
-        //   .then(result => console.log(result));
-        
-        // Temporary confirmation for demonstration purposes
-        alert('Message sent! Name: ' + data.name + ', Email: ' + data.email + ', Message: ' + data.message);
-    });
-}
-
-// Load the home page by default
-window.onload = () => loadPage('home');
+<h1>Kontakt</h1>
+<p>Wir freuen uns, von Ihnen zu hören! Bitte verwenden Sie die folgenden Kontaktinformationen, um mit uns in Verbindung zu treten.</p>
+<p><strong>Adresse:</strong> Musterstraße 1, 12345 Musterstadt</p>
+<p><strong>Telefon:</strong> +49 123 456 7890</p>
+<p><strong>Email:</strong> kontakt@meinewebsite.de</p>
+<p>Oder nutzen Sie unser Kontaktformular, um uns eine Nachricht zu senden:</p>
+<form>
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name"><br><br>
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email"><br><br>
+    <label for="message">Nachricht:</label><br>
+    <textarea id="message" name="message" rows="4" cols="50"></textarea><br><br>
+    <input type="submit" value="Senden">
+</form>
