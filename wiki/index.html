@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Website</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="../" onclick="loadPage('home')">Home</a></li>
+                <li><a href="../about" onclick="loadPage('about')">About Us</a></li>
+                <li><a href="../contact" onclick="loadPage('contact')">Contact</a></li>
+                <li><a href="../wiki" onclick="loadPage('wiki')">Wiki</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main id="content">
+        <h1>Wiki</h1>
+        <div class="wiki-category">Web Technologies</div>
+        <div class="wiki-category-content">
+            <a href="#" onclick="loadWikiPage('HTML')">HTML</a>
+            <a href="#" onclick="loadWikiPage('CSS')">CSS</a>
+            <a href="#" onclick="loadWikiPage('JavaScript')">JavaScript</a>
+        </div>
+        <div class="wiki-category">Programming Languages</div>
+        <div class="wiki-category-content">
+            <a href="#" onclick="loadWikiPage('Python')">Python</a>
+            <a href="#" onclick="loadWikiPage('Java')">Java</a>
+            <a href="#" onclick="loadWikiPage('CSharp')">C#</a>
+        </div>
+        <div id="wikiContent">
+            <!-- Wiki content will be loaded here -->
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
